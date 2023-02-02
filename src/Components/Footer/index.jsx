@@ -4,7 +4,7 @@ import './style.css'
 const Footer = () => {
     return (
         <>
-            <footer className="footer flex flex-col items-center justify-center border-t-2 border-[#bbbbbb] md:border-0">
+            <footer className="footer flex flex-col items-center justify-center border-t-2 border-[#bbbbbb] md:border-0 smallText shadow-2xl">
                 <div className="container">
                     <div className="row flex flex-wrap justify-around md:pb-5">
                         <div className="footer-col">
