@@ -1,0 +1,53 @@
+@import url(https://fonts.googleapis.com/css?family=Covered+By+Your+Grace);
+
+#days {
+  /* font-size: 70px; */
+  color: #db4844;
+  display: inline-block;
+  padding: 0px 13px;
+}
+#hours {
+  /* font-size: 70px; */
+  color: #f07c22;
+  display: inline-block;
+  padding: 0px 13px;
+}
+#minutes {
+  /* font-size: 70px; */
+  color: #f6da74;
+  display: inline-block;
+  padding: 0px 13px;
+}
+#seconds {
+  /* font-size: 70px; */
+  color: #abcd58;
+  display: inline-block;
+  padding: 0px 13px;
+}
+
+.countdownSpan {
+  display: block;
+  font-size: 20px;
+  color: rgb(85, 85, 85);
+}
+
+.countdownBody {
+  text-align: center;
+  font-family: 'Covered By Your Grace', cursive;
+  color: rgb(104, 104, 104);
+  display: inline-block;
+  line-height: 1;
+  padding: 20px;
+  font-size: 40px;
+}
+
+.loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  color: rgb(56, 56, 56);
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Covered By Your Grace', cursive;
+}
