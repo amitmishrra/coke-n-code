@@ -2,6 +2,7 @@ import React from 'react'
 import "./style.css"
 export default function LandingPage() {
     return (
+        <>
         <div className='topSec h-[100vh] pt-44 md:pt-36'>
             <div className="heroSec max-width flex flex-col justify-around items-center h-[55vh]">
                 <div className="gagalin text-[38px] md:text-[80px] text-white text-center"><span className='heading-line '>CODE</span> • <span className='heading-line'>COMPETE</span> • <span className='heading-line'>WIN</span>
@@ -19,5 +20,63 @@ export default function LandingPage() {
                 </div>
             </div>
         </div>
+
+        <div className="codeSection max-width flex flex-col md:flex-row justify-around md:justify-between items-center h-[75vh]">
+            <div className="leftSide w-[90%] md:w-[50%] flex-col flex justify-center p-4">
+                    <div className="gagalin text-[38px] md:text-[80px] text-white">
+                       <div className="coke"> Code</div>
+                    </div>
+
+                    <div className='smallText text-white text-justify '>
+                        Build your project using any language and framework of your choice.
+                        ojfgojd si dfg dfgios io godf gkds igdfg s ig sdfgh ihg sdg h gh sd
+                        Build your project using any language and framework of your choice. ojfgojd si dfg dfgios io godf gkds igdfg s ig sdfgh ihg sdg h gh sd
+                    </div>
+            </div>
+
+            <div className="right w-[90%] md:w-[50%] flex-col flex justify-center items-center">
+                <img className='w-[90%] rounded-[10px] shadow-2xl codeImage' src="/assets/LandingPageImages/code.jpeg" alt="" />
+            </div>
+        </div>
+
+
+        <div className="competeSection max-width flex flex-col md:flex-row-reverse justify-around md:justify-between items-center h-[75vh]">
+            <div className="leftSide w-[90%] md:w-[50%] flex-col flex justify-center p-4">
+                    <div className="gagalin text-[38px] md:text-[80px] text-white text-right">
+                       <div className="coke">Compete</div>
+                    </div>
+
+                    <div className='smallText text-white text-justify '>
+                        Build your project using any language and framework of your choice.
+                        ojfgojd si dfg dfgios io godf gkds igdfg s ig sdfgh ihg sdg h gh sd
+                        Build your project using any language and framework of your choice. ojfgojd si dfg dfgios io godf gkds igdfg s ig sdfgh ihg sdg h gh sd
+                    </div>
+            </div>
+
+            <div className="right w-[90%] md:w-[50%] flex-col flex justify-center items-center">
+                <img className='w-[90%] rounded-[10px] shadow-2xl codeImage' src="/assets/LandingPageImages/compete.png" alt="" />
+            </div>
+        </div>
+
+        <div className="codeSection max-width flex flex-col md:flex-row justify-around md:justify-between items-center h-[75vh]">
+            <div className="leftSide w-[90%] md:w-[50%] flex-col flex justify-center p-4">
+                    <div className="gagalin text-[38px] md:text-[80px] text-white">
+                       <div className="coke">Win</div>
+                    </div>
+
+                    <div className='smallText text-white text-justify '>
+                        Build your project using any language and framework of your choice.
+                        ojfgojd si dfg dfgios io godf gkds igdfg s ig sdfgh ihg sdg h gh sd
+                        Build your project using any language and framework of your choice. ojfgojd si dfg dfgios io godf gkds igdfg s ig sdfgh ihg sdg h gh sd
+                    </div>
+            </div>
+
+            <div className="right w-[90%] md:w-[50%] flex-col flex justify-center items-center">
+                <img className='w-[60%]' src="/assets/LandingPageImages/win.gif" alt="" />
+            </div>
+        </div>
+
+        </>
+        
     )
 }
