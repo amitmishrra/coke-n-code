@@ -33,13 +33,13 @@
 .menu ul li a {
     text-decoration: none;
     color: white;
-    /* font-family: 'Comfortaa', cursive; */
+    transition: 0.5s ease-in-out;
 }
 
 .menu ul li a:hover {
     text-decoration: none;
     transform: rotate3d('20deg');
-    color: rgb(63, 63, 63);
+    color: rgb(255, 0, 0);
 }
 
 .navToggler {
