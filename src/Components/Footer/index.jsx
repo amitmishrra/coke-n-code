@@ -21,7 +21,7 @@ const Footer = () => {
                             <ul>
                                 <li><a href="#">Your contests</a></li>
                                 <li><a href="#">Your Performances</a></li>
-                                <li><a href="#">Upcoming Contests</a></li>
+                                {/* <li><a href="#">Upcoming Contests</a></li> */}
                                 <li><a href="#">Participation </a></li>
                                 <li><a href="#">FAQS</a></li>
                             </ul>
@@ -37,12 +37,41 @@ const Footer = () => {
                         </div>
                         <div className="footer-col flex md:flex-col md:justify-start justify-between">
                             <h4>follow us</h4>
-                            <div className="social-links flex justify-center gap-2">
+                            <div className="social-links flex md:flex-col justify-center gap-2">
+                                <a href="#">
+                                    <div className="flex items-center gap-3">
+                                        <Facebook /><p className=" md:block hidden">Facebook</p>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div className="flex items-center gap-3">
+                                        <Twitter /><p className=" md:block hidden">Twitter</p>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div className="flex items-center gap-3">
+                                        <Instagram /><p className=" md:block hidden">Instagram</p>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div className="flex items-center gap-3">
+                                        <LinkedIn /><p className=" md:block hidden">LinkedIn</p>
+                                    </div>
+                                </a>
+                            </div>
+                            {/* <div className="social-links flex justify-center gap-2">
                                 <a href="#"><Facebook /></a>
                                 <a href="#"><Twitter /></a>
                                 <a href="#"><Instagram /></a>
                                 <a href="#"><LinkedIn /></a>
-                            </div>
+                            </div> */}
+                            {/* <div className="md:flex hidden flex-col justify-center gap-6">
+                                    <a href="#" className="md:block hidden">Facebook</a>
+                                    <a href="#" className="md:block hidden">Twitter</a>
+                                    <a href="#" className="md:block hidden">Instagram</a>
+                                    <a href="#" className="md:block hidden">LinkedIn</a>
+                                </div> */}
+
                         </div>
                     </div>
                     <hr></hr>
