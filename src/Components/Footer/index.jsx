@@ -6,7 +6,7 @@ const Footer = () => {
         <>
             <footer className="footer flex flex-col items-center justify-center border-t-2 border-[#bbbbbb] md:border-0 smallText shadow-2xl">
                 <div className="container">
-                    <div className="row flex flex-wrap justify-around md:pb-5">
+                    <div className="row flex flex-wrap justify-between md:pb-5">
                         <div className="footer-col">
                             <h4>company</h4>
                             <ul>
