@@ -2,6 +2,7 @@ import { Route, Routes, HashRouter, BrowserRouter } from "react-router-dom";
 import CommonContainer from "./CommonContainer";
 import LandingPage from "./Pages/LandingPage";
 import Login from "./Pages/LoginPage";
+import Signup from "./Pages/SignupPage";
 
 function App() {
   return (
@@ -19,6 +20,13 @@ function App() {
             element={
               // <CommonContainer>
                 <Login/>
+              // </CommonContainer>
+            } />
+          
+          <Route path="/signup"
+            element={
+              // <CommonContainer>
+                <Signup />
               // </CommonContainer>
             } />
 
