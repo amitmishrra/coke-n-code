@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <>
             <footer className="footer flex flex-col items-center justify-center border-t-2 border-[#bbbbbb] md:border-0 smallText shadow-2xl">
-                <div className="container">
+                <div className="container max-w-[1200px]">
                     <div className="row flex flex-wrap justify-between md:pb-5">
                         <div className="footer-col">
                             <h4>company</h4>
