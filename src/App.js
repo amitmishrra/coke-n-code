@@ -1,20 +1,29 @@
-import { Route, Routes, HashRouter } from "react-router-dom";
+import { Route, Routes, HashRouter, BrowserRouter } from "react-router-dom";
 import CommonContainer from "./CommonContainer";
 import LandingPage from "./Pages/LandingPage";
+import Login from "./Pages/LoginPage";
 
 function App() {
   return (
     <>
-          <HashRouter>
+      <BrowserRouter>
         <Routes>
           <Route path="/"
             element={
               <CommonContainer>
-                <LandingPage/>
+                <LandingPage />
               </CommonContainer>
             } />
+
+          <Route path="/login"
+            element={
+              // <CommonContainer>
+                <Login/>
+              // </CommonContainer>
+            } />
+
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </>
   );
 }
