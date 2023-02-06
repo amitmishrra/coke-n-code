@@ -45,9 +45,7 @@ export default function LandingPage() {
                     </div>
 
                     <div className='smallText text-white text-justify '>
-                        Build your project using any language and framework of your choice.
-                        ojfgojd si dfg dfgios io godf gkds igdfg s ig sdfgh ihg sdg h gh sd
-                        Build your project using any language and framework of your choice. ojfgojd si dfg dfgios io godf gkds igdfg s ig sdfgh ihg sdg h gh sd
+                       Get ready to compete in a new and innovative way at our online hackathon event! With dynamic coding challenges and a vibrant community of coders, this event promises to be a unique and memorable experience. So, come join us and let's bring your coding skills to the competition.
                     </div>
             </div>
 
