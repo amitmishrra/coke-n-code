@@ -10,8 +10,7 @@ import validator from 'validator';
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
 
-const SignupPage = () => {
-
+export default function SignupPage() {    
     const [open, setOpen] = useState(false);
     const [msg, setMsg] = useState("");
     const [username, setUsername] = useState("");
@@ -73,13 +72,13 @@ const SignupPage = () => {
     const handleSubmit = async () => {
         setButtonClicked(true);
         await validate();
-        if(username.length < 1){
+        if (username.length < 1) {
             setvalid(false);
             setMsg("Username cannot be empty");
             setOpen(true);
             setButtonClicked(false);
         }
-        else if(email.length < 1){
+        else if (email.length < 1) {
             setvalid(false);
             setMsg("Email cannot be empty");
             setOpen(true);
@@ -91,22 +90,22 @@ const SignupPage = () => {
             setOpen(true);
             setButtonClicked(false);
         }
-        else if(password.length < 1){
+        else if (password.length < 1) {
             setvalid(false);
             setMsg("Password cannot be empty");
             setOpen(true);
             setButtonClicked(false);
         }
-        else if(!validator.isStrongPassword(password, {
+        else if (!validator.isStrongPassword(password, {
             minLength: 8, minLowercase: 1,
             minUppercase: 1, minNumbers: 1, minSymbols: 1
-        })){
+        })) {
             setvalid(false);
             setMsg("Password must contain 1 lowercase, 1 uppercase, 1 number and 1 symbol, and at least 8 characters");
             setOpen(true);
             setButtonClicked(false);
         }
-        else if(cnfPassword !== password){
+        else if (cnfPassword !== password) {
             setvalid(false);
             setMsg("Passwords are not same");
             setOpen(true);
@@ -146,7 +145,7 @@ const SignupPage = () => {
 
                     <div className="flex flex-col justify-center items-center w-[100%]">
                         {buttonClicked ?
-                            <CircularProgress sx={{color : "red", width : "30px", margin : "11.2px" }} /> :
+                            <CircularProgress sx={{ color: "red", width: "30px", margin: "11.2px" }} /> :
                             <button className='loginButton w-[75%] md:w-[65%] shadow-md' disabled={buttonClicked ? true : false} onClick={handleSubmit}>Register</button>}
                     </div>
 
@@ -163,6 +162,5 @@ const SignupPage = () => {
             </div>
         </>
     )
-}
 
-export default SignupPage;
+}
