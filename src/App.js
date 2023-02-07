@@ -2,7 +2,8 @@ import { Route, Routes, HashRouter, BrowserRouter } from "react-router-dom";
 import CommonContainer from "./CommonContainer";
 import LandingPage from "./Pages/LandingPage";
 import Login from "./Pages/LoginPage";
-import Signup from "./Pages/SignupPage";
+import SignupPage from "./Pages/SignUpPage";
+// import Signup from "./Pages/SignupPage";
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
           <Route path="/signup"
             element={
               // <CommonContainer>
-                <Signup />
+              <SignupPage/>
               // </CommonContainer>
             } />
 

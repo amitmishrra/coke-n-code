@@ -10,7 +10,7 @@ import validator from 'validator';
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
 
-const Signup = () => {
+const SignupPage = () => {
 
     const [open, setOpen] = useState(false);
     const [msg, setMsg] = useState("");
@@ -165,4 +165,4 @@ const Signup = () => {
     )
 }
 
-export default Signup;
+export default SignupPage;
