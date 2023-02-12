@@ -29,12 +29,16 @@ const Countdown = () => {
             {
                 days ?
                     <div className='countdownBody'>
-                        <div>Starts in</div>
-                        <div id="timer" className=' w-[65%] md:w-[100%] m-auto'>
-                            <div id="days" className='text-[135px] md:text-[150px] md:m-8'>{days} <span className='countdownSpan text-[25px] md:text-[35px]'>Days</span> </div>
-                            <div id="hours" className='text-[85px] m-[10px] md:text-[150px] md:m-8'>{hours}<span className='countdownSpan text-[25px] md:text-[35px]'>Hours</span></div>
-                            <div id="minutes" className='text-[85px] mr-[10px] md:text-[150px] md:m-8'>{minutes}<span className='countdownSpan text-[25px] md:text-[35px]'>Minutes</span></div>
-                            <div id="seconds" className='text-[135px] md:text-[150px] md:m-8'>{parseInt(seconds)}<span className='countdownSpan text-[25px] md:text-[35px]'>Seconds</span></div>
+                        <div className='text-white smallText'>Starts in</div>
+                        <div id="timer" className='w-[100%] p-5 m-auto  mt-5 shadow-2xl rounded-2xl'>
+                            <div className='inline-block'>
+                                <div id="days" className='gagalin text-[80px] m-[10px] inline-block text-white'>{days} :</div><span className='smallText countdownSpan text-[25px] md:text-[35px] text-left text-red-600'>Days</span> </div>
+                            <div className='inline-block'>
+                                <div id="hours" className='gagalin text-[80px] m-[10px] inline-block text-white'>{hours} :</div><span className='smallText countdownSpan text-[25px] md:text-[35px] text-left text-red-600'>Hours</span></div>
+                            <div className='inline-block'>
+                                <div id="minutes" className='gagalin text-[80px] m-[10px] inline-block text-white'>{minutes} <span>:</span></div><span className='smallText countdownSpan text-[25px] md:text-[35px] text-left text-red-600'>Minutes</span></div>
+                            <div className='inline-block'>
+                                <div id="seconds" className='gagalin text-[80px] m-[10px] inline-block text-white'>{parseInt(seconds)}</div><span className='smallText countdownSpan text-[25px] md:text-[35px] text-left text-red-600'>Seconds</span></div>
                         </div>
                     </div> : <div className='mt-16'>
                         {showLoading ? <span className='loading'>Loading...</span> : <div />}
@@ -45,3 +49,8 @@ const Countdown = () => {
 }
 
 export default Countdown;
+
+
+// md:text-[150px]
+// md:m-8
+// md:w-[100%] 
