@@ -23,7 +23,11 @@
 	background-color: #ff0000;
 	height: 2px;
 	box-sizing: border-box;
-	width: 50px;
+	width: 40px;
+}
+.footer-col h4:hover:before{
+	width: 100%;
+	transition: all 0.5s ease-in-out;
 }
 .footer-col ul li:not(:last-child){
 	margin-bottom: 10px;
