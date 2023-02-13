@@ -5,8 +5,39 @@ const Footer = () => {
     return (
         <>
             <footer className="footer flex flex-col items-center justify-center border-t-2 border-[#bbbbbb] md:border-0 smallText shadow-2xl">
-                <div className="container max-w-[1200px]">
-                    <div className="row flex flex-wrap justify-between md:pb-5">
+                <div className="container max-w-[1200px] flex justify-between md:items-center flex-col-reverse md:flex-row px-5">
+                    <div className="footer-logo py-32 md:py-10 ">
+                        <img src="assets/logo2.png" className='w-[200px] md:w-[200px] ' alt="" />
+                    </div>
+                    <div className="footer-div flex flex-col">
+                        <div className="footer-col">
+                            <ul className='flex flex-col md:flex-row md:gap-5 '>
+                                <li><a href="#">Contests</a></li>
+                                <li><a href="#">Performances</a></li>
+                                <li><a href="#">Tasks</a></li>
+                                <li><a href="#">Program</a></li>
+                                <li><a href="#">Upcoming Contests</a></li>
+                                <li><a href="#">Participation </a></li>
+                                <li><a href="#">FAQs</a></li>
+                            </ul>
+                        </div>
+                        <div className="social-links flex gap-5 py-8">
+                            <a href="#"> <Facebook fontSize='inherit'/> </a>
+                            <a href="#"> <Twitter fontSize='inherit' /> </a>
+                            <a href="#"> <Instagram fontSize='inherit' /> </a>
+                            <a href="#"> <LinkedIn fontSize='inherit' /> </a>
+                        </div>
+                        <div className="footer-col terms-col">
+                            <ul className="flex flex-wrap">
+                                <li>@ skillance corp.</li>
+                                <li><a href="#">Terms & conditions</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Services</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    {/* <div className="row flex flex-wrap justify-between md:pb-5">
                         <div className="footer-col">
                             <h4>company</h4>
                             <ul>
@@ -21,7 +52,7 @@ const Footer = () => {
                             <ul>
                                 <li><a href="#">Your contests</a></li>
                                 <li><a href="#">Your Performances</a></li>
-                                {/* <li><a href="#">Upcoming Contests</a></li> */}
+                                <li><a href="#">Upcoming Contests</a></li>
                                 <li><a href="#">Participation </a></li>
                                 <li><a href="#">FAQS</a></li>
                             </ul>
@@ -59,18 +90,7 @@ const Footer = () => {
                                     </div>
                                 </a>
                             </div>
-                            {/* <div className="social-links flex justify-center gap-2">
-                                <a href="#"><Facebook /></a>
-                                <a href="#"><Twitter /></a>
-                                <a href="#"><Instagram /></a>
-                                <a href="#"><LinkedIn /></a>
-                            </div> */}
-                            {/* <div className="md:flex hidden flex-col justify-center gap-6">
-                                    <a href="#" className="md:block hidden">Facebook</a>
-                                    <a href="#" className="md:block hidden">Twitter</a>
-                                    <a href="#" className="md:block hidden">Instagram</a>
-                                    <a href="#" className="md:block hidden">LinkedIn</a>
-                                </div> */}
+                            
 
                         </div>
                     </div>
@@ -90,10 +110,10 @@ const Footer = () => {
                             PRIVACY POLICY
                         </p>
                         </a>
-                    </div>
+                    </div> */}
                     {/* <div id="d1"> @2022 .All rights reserved</div> <br></br>
                     <div id="d1"> Terms & conditions</div><br></br>
-                <div id="d1"> PRIVACY POLICY</div> */}
+                    <div id="d1"> PRIVACY POLICY</div> */}
 
                 </div>
             </footer>
