@@ -5,7 +5,7 @@ import "./Style.css";
 const Countdown = () => {
 
 
-    var countDownDate = new Date("Feb 15, 2023 15:37:25").getTime();
+    var countDownDate = new Date("Mar 15, 2023 15:37:25").getTime();
 
     var showLoading = false;
 
@@ -29,16 +29,16 @@ const Countdown = () => {
             {
                 days ?
                     <div className='countdownBody'>
-                        <div className='text-white smallText'>Starts in</div>
-                        <div id="timer" className='w-[100%] p-5 m-auto  mt-5 shadow-2xl rounded-2xl'>
+                        <div className='text-white smallText text-[25px]'>Starts in</div>
+                        <div id="timer" className='w-[100%] p-5 m-auto  shadow-2xl rounded-2xl'>
                             <div className='inline-block'>
-                                <div id="days" className='gagalin text-[80px] m-[10px] inline-block text-white'>{days} :</div><span className='smallText countdownSpan text-[25px] md:text-[35px] text-left text-red-600'>Days</span> </div>
+                                <div id="days" className='gagalin text-[30px] md:text-[80px] m-[10px] inline-block text-white'>{days < 10 ? `0${days}` : days} :</div><span className='smallText countdownSpan text-[14px] md:text-[25px] text-left text-red-600'>Days</span> </div>
                             <div className='inline-block'>
-                                <div id="hours" className='gagalin text-[80px] m-[10px] inline-block text-white'>{hours} :</div><span className='smallText countdownSpan text-[25px] md:text-[35px] text-left text-red-600'>Hours</span></div>
+                                <div id="hours" className='gagalin text-[30px] md:text-[80px] m-[10px] inline-block text-white'>{hours < 10 ? `0${hours}` : hours} :</div><span className='smallText countdownSpan text-[14px] md:text-[25px] text-left text-red-600'>Hours</span></div>
                             <div className='inline-block'>
-                                <div id="minutes" className='gagalin text-[80px] m-[10px] inline-block text-white'>{minutes} <span>:</span></div><span className='smallText countdownSpan text-[25px] md:text-[35px] text-left text-red-600'>Minutes</span></div>
+                                <div id="minutes" className='gagalin text-[30px] md:text-[80px] m-[10px] inline-block text-white'>{minutes < 10 ? `0${minutes}` : minutes} <span>:</span></div><span className='smallText countdownSpan text-[14px] md:text-[25px] text-left text-red-600'>Minutes</span></div>
                             <div className='inline-block'>
-                                <div id="seconds" className='gagalin text-[80px] m-[10px] inline-block text-white'>{parseInt(seconds)}</div><span className='smallText countdownSpan text-[25px] md:text-[35px] text-left text-red-600'>Seconds</span></div>
+                                <div id="seconds" className='gagalin text-[30px] md:text-[80px] m-[10px] inline-block text-white'>{parseInt(seconds) < 10 ? `0${parseInt(seconds)}` : parseInt(seconds)}</div><span className='smallText countdownSpan text-[14px] md:text-[25px] text-left text-red-600'>Seconds</span></div>
                         </div>
                     </div> : <div className='mt-16'>
                         {showLoading ? <span className='loading'>Loading...</span> : <div />}
@@ -51,6 +51,6 @@ const Countdown = () => {
 export default Countdown;
 
 
-// md:text-[150px]
+// md:text-[130px]
 // md:m-8
 // md:w-[100%] 
