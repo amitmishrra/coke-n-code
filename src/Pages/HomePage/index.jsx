@@ -8,9 +8,7 @@ export default function Home() {
       <div className="homeTopSec h-[100vh]">
         <div className="homeherosec flex flex-col max-width justify-center items-center h-[100vh] md:h-[65vh] pt-24 md:pt-36">
           <div className='py-16 text-center gagalin text-white text-[40px] md:text-[75px]'>
-           
               frontend blast
-          
           </div>
 
           <Countdown />
