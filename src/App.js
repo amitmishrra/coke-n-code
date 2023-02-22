@@ -18,16 +18,12 @@ function App() {
 
           <Route path="/login"
             element={
-              // <CommonContainer>
               <Login />
-              // </CommonContainer>
             } />
 
           <Route path="/signup"
             element={
-              // <CommonContainer>
               <SignupPage />
-              // </CommonContainer>
             } />
 
           <Route path="/home"
