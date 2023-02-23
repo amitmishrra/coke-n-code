@@ -59,19 +59,6 @@ const Footer = () => {
                                     </div>
                                 </a>
                             </div>
-                            {/* <div className="social-links flex justify-center gap-2">
-                                <a href="#"><Facebook /></a>
-                                <a href="#"><Twitter /></a>
-                                <a href="#"><Instagram /></a>
-                                <a href="#"><LinkedIn /></a>
-                            </div> */}
-                            {/* <div className="md:flex hidden flex-col justify-center gap-6">
-                                    <a href="#" className="md:block hidden">Facebook</a>
-                                    <a href="#" className="md:block hidden">Twitter</a>
-                                    <a href="#" className="md:block hidden">Instagram</a>
-                                    <a href="#" className="md:block hidden">LinkedIn</a>
-                                </div> */}
-
                         </div>
                     </div>
                     <hr></hr>
