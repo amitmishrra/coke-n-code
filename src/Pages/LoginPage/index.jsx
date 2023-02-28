@@ -106,7 +106,7 @@ const Login = () => {
 
                     <div className="flex flex-col justify-center items-center w-[100%]">
                         <input className='inputs w-[75%] md:w-[65%] shadow-md' required placeholder='Email' type="mail" onChange={e => (setEmail(e.target.value))} />
-                        <input className='inputs w-[75%] md:w-[65%] shadow-md' required placeholder='Password' type="mail" onChange={e => (setPassword(e.target.value))} />
+                        <input className='inputs w-[75%] md:w-[65%] shadow-md' required placeholder='Password' type="password" onChange={e => (setPassword(e.target.value))} />
                     </div>
 
                     <div className="flex flex-col justify-center items-center w-[100%]">
@@ -116,7 +116,7 @@ const Login = () => {
                     </div>
 
                     <div className="flex justify-center items-center w-[100%] text-white mt-[20px]">
-                        Don't have an account? <NavLink to="/register" className="text-[#ff0000] ml-2"> Register Now</NavLink>
+                        Don't have an account? <NavLink to="/signup" className="text-[#ff0000] ml-2"> Register Now</NavLink>
                     </div>
                 </div>
 

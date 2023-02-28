@@ -7,7 +7,7 @@ import SignupPage from "./Pages/SignupPage";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/"
             element={
@@ -34,7 +34,7 @@ function App() {
             } />
 
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }
