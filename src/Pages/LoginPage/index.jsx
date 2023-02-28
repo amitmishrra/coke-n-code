@@ -25,7 +25,7 @@ const Login = () => {
 
 
     const loginApi = async () => {
-        fetch("https://gigacodebackend.vercel.app/login-user", {
+        fetch("https://coke-n-code-backend.vercel.app/login-user", {
             method: "POST",
             crossDomain: true,
             headers: {
@@ -47,9 +47,13 @@ const Login = () => {
                     setButtonClicked(false);
                     setOpen(true);
                 }
-                if (data.msg === "Logged in succesfully") {
+                if (data.msg === "Logged in successfully") {
                     setMsg("Logged in succesfully.");
                     setloggedIn(true)
+                    localStorage.setItem("loggedIn", "true");
+                    setTimeout(() => {
+                        window.location.href = "/home";
+                    }, 1000);
                 }
                 if (data.msg === "Incorrect Password") {
                     setMsg("Incorrect Password. Try again.");
@@ -59,13 +63,6 @@ const Login = () => {
                 }
             })
     }
-
-
-    // useEffect(() => {
-    //     validate();
-
-    // }, [valid]);
-
 
     const handleSubmit = async () => {
         setButtonClicked(true);
@@ -108,7 +105,7 @@ const Login = () => {
                     <div className='text-white text-[23px] text-center smallText'>Welcome back <span className="coke">Geek </span>!</div>
 
                     <div className="flex flex-col justify-center items-center w-[100%]">
-                        <input className='inputs w-[75%] md:w-[65%] shadow-md' required placeholder='Username' type="mail" onChange={e => (setEmail(e.target.value))} />
+                        <input className='inputs w-[75%] md:w-[65%] shadow-md' required placeholder='Email' type="mail" onChange={e => (setEmail(e.target.value))} />
                         <input className='inputs w-[75%] md:w-[65%] shadow-md' required placeholder='Password' type="mail" onChange={e => (setPassword(e.target.value))} />
                     </div>
 

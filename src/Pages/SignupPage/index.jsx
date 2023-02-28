@@ -10,10 +10,11 @@ import validator from 'validator';
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
 
-export default function SignupPage() {    
+export default function SignupPage() {
     const [open, setOpen] = useState(false);
     const [msg, setMsg] = useState("");
     const [username, setUsername] = useState("");
+    const [fullName, setFullName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [cnfPassword, setCnfPassword] = useState("");
@@ -22,57 +23,54 @@ export default function SignupPage() {
     const [buttonClicked, setButtonClicked] = useState(false);
     const validate = async () => {
         console.log(email, password);
-
     };
 
 
-    // const loginApi = async () => {
-    //     fetch("https://gigacodebackend.vercel.app/login-user", {
-    //         method: "POST",
-    //         crossDomain: true,
-    //         headers: {
-    //             "content-Type": "application/json",
-    //             Accept: "application/json",
-    //             "Access-Control-Allow-Origin": "*"
-    //         },
-    //         body: JSON.stringify({
-    //             email: email,
-    //             password: password,
-    //         }),
-    //     }).then((res) => res.json())
-    //         .then((data) => {
-    //             console.log(data, "registered")
-
-    //             if (data.msg === "User not found") {
-    //                 setMsg("You are not registered.");
-    //                 setloggedIn(false)
-    //                 setButtonClicked(false);
-    //                 setOpen(true);
-    //             }
-    //             if (data.msg === "Logged in succesfully") {
-    //                 setMsg("Logged in succesfully.");
-    //                 setloggedIn(true)
-    //             }
-    //             if (data.msg === "Incorrect Password") {
-    //                 setMsg("Incorrect Password. Try again.");
-    //                 setloggedIn(false);
-    //                 setButtonClicked(false);
-    //                 setOpen(true);
-    //             }
-    //         })
-    // }
+    const signupAPI = async () => {
+        fetch("https://coke-n-code-backend.vercel.app/signup", {
+            method: "POST",
+            crossDomain: true,
+            headers: {
+                "content-Type": "application/json",
+                Accept: "application/json",
+                "Access-Control-Allow-Origin": "*"
+            },
+            body: JSON.stringify({
+                fullName: fullName,
+                username: username,
+                email: email,
+                password: password,
+            }),
+        }).then((res) => res.json())
+            .then((data) => {
+                console.log(data)
+                if (data.msg === "User created successfully") {
+                    setOpen(true);
+                    setMsg("User created successfully. Please login to continue.");
+                    setloggedIn(true)
+                    setTimeout(() => {
+                        window.location.href = "/login";
+                    }, 1000);
+                }else{
+                    setOpen(true);
+                    setMsg(data.msg)
+                    setButtonClicked(false);
+                }
+            })
+    }
 
 
-    // useEffect(() => {
-    //     validate();
-
-    // }, [valid]);
-
-    // VALIDATION
     const handleSubmit = async () => {
         setButtonClicked(true);
         await validate();
-        if (username.length < 1) {
+
+        if (fullName.length < 1) {
+            setvalid(false);
+            setMsg("Full Name cannot be empty");
+            setOpen(true);
+            setButtonClicked(false);
+        }
+        else if (username.length < 1) {
             setvalid(false);
             setMsg("Username cannot be empty");
             setOpen(true);
@@ -113,7 +111,7 @@ export default function SignupPage() {
         }
         else {
             setvalid(true);
-            // loginApi();
+            signupAPI();
         }
     };
     const handleClose = () => {
@@ -137,6 +135,7 @@ export default function SignupPage() {
                     <div className='text-white text-[23px] text-center smallText'>Welcome <span className="coke">Geek </span>!</div>
 
                     <div className="flex flex-col justify-center items-center w-[100%]">
+                        <input className='inputs w-[75%] md:w-[65%] shadow-md' required placeholder='Full Name' type="text" onChange={e => (setFullName(e.target.value))} />
                         <input className='inputs w-[75%] md:w-[65%] shadow-md' required placeholder='Username' type="text" onChange={e => (setUsername(e.target.value))} />
                         <input className='inputs w-[75%] md:w-[65%] shadow-md' required placeholder='Email' type="mail" onChange={e => (setEmail(e.target.value))} />
                         <input className='inputs w-[75%] md:w-[65%] shadow-md' required placeholder='Password' type="password" onChange={e => (setPassword(e.target.value))} />
