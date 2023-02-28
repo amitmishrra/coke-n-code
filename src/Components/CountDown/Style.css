@@ -3,7 +3,7 @@
 
 .countdownSpan {
   display: block;
-  font-size: 20px;
+  /* font-size: 17px; */
 
 }
 
@@ -11,8 +11,8 @@
   text-align: center;
   color: rgb(104, 104, 104);
   line-height: 1;
-  padding: 20px;
-  font-size: 40px;
+  /* padding: 20px; */
+  /* font-size: 40px; */
   margin: auto;
 }
 
@@ -23,5 +23,16 @@
   padding: 40px;
   color: rgb(56, 56, 56);
   text-align: center;
-  font-size: 40px;
+  /* font-size: 40px; */
+}
+
+
+@media screen and (max-width: 700px) {
+  .countdownBody {
+    /* font-size: 20px; */
+  }
+  .countdownBody {
+    /* font-size: 30px; */
+  }
+  
 }

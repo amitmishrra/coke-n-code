@@ -63,7 +63,7 @@
 }
 
 .buttons {
-  width: 550px;
+  width: 50%;
   margin: 20px auto 70px;
   display: flex;
   justify-content: space-evenly;
@@ -123,3 +123,40 @@
 .homePage-button:active {
   filter: brightness(.8);
 }
+
+.nextbox{
+    height: 200px;
+    min-width: 270px;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 20px;
+}
+.events{
+  overflow-x: scroll;
+  min-width: 90%;
+}
+
+.homeTopSec{
+  background-image: linear-gradient(to bottom, rgba(73, 69, 69, 0) 80%, rgba(0, 0, 0, 0.411) 100%), url("../../../public/assets/wave2.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
+
+@media screen and (max-width: 768px) {
+  .homePage-button {
+    width: 120px;
+    height: 40px;
+    padding: 7px;
+    font-size: 15px;
+  }
+
+  .buttons {
+    width: 100%;
+  }
+}
+  
