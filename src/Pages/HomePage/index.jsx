@@ -26,14 +26,14 @@ export default function Home() {
           Upcoming Events
         </div>
 
-        <div className="events flex justify-betweemn items-center w-[90%]">
+        <div className="events flex justify-between items-center w-[90%]">
           {eventsData.map((event) => {
             return (
-              <div className="nextbox">
-                <div className="name gagalin text-[30px] coke">
+              <div className="nextbox flex flex-col justify-start">
+                <div className="name gagalin md:text-[30px] text-[23px] coke">
                   {event.eventName}
                 </div>
-                <div className="des text-justify">
+                <div className="des text-justify md:text-[17px] text-[13px]">
                  {event.description}
                 </div>
                 <div className="comingSoon">

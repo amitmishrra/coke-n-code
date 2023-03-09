@@ -49,7 +49,7 @@ export default function SignupPage() {
                     setMsg("User created successfully. Please login to continue.");
                     setloggedIn(true)
                     setTimeout(() => {
-                        window.location.href = "/login";
+                        navigator.push("/home");
                     }, 1000);
                 }else{
                     setOpen(true);
