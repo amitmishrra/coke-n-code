@@ -22,8 +22,12 @@
     width: 100%;
     padding: .2rem;
     /* margin-top: 2rem; */
-    font-size: 1.25rem/* 20px */;
-    line-height: 1.75rem/* 28px */;
+    font-size: 1.25rem
+        /* 20px */
+    ;
+    line-height: 1.75rem
+        /* 28px */
+    ;
     border: 1px solid #ff0000;
     color: #FF0000;
     transition: 0.3s ease;
@@ -45,21 +49,38 @@
     opacity: 0;
 }
 
-.participateBtn:hover{
-    color: #fff;
+.EventsSec ul li:nth-child(n+3) {
+    display: none;
 }
-.participateBtn:hover:before {
-    -webkit-transform: scaleX(1000%);
-    -ms-transform: scaleX(1000%);
-    transform: scaleX(1000%);
-    opacity: 1
+
+
+
+.registerButton {
+    border-radius: 12px;
+    background: #c90000;
+    box-shadow: 7px 7px 14px #ab0000,
+        -7px -7px 14px #e70000;
+}
+
+.imgObj {
+    background: #c90000;
+    box-shadow: 7px 7px 14px #ab0000,
+        -7px -7px 14px #e70000;
 }
 
 @media (min-width: 768px) {
     .participateBtn {
-        font-size: 1.5rem/* 24px */;
-        line-height: 2rem/* 32px */;
-        padding-top: 0.5rem/* 8px */;
-        padding-bottom: 0.5rem/* 8px */;
+        font-size: 1.5rem
+            /* 24px */
+        ;
+        line-height: 2rem
+            /* 32px */
+        ;
+        padding-top: 0.5rem
+            /* 8px */
+        ;
+        padding-bottom: 0.5rem
+            /* 8px */
+        ;
     }
 }

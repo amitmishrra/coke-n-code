@@ -1,43 +1,78 @@
+import { display } from "@mui/system";
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useRef } from "react";
+import { json } from "react-router-dom";
 import { EventData } from "../../Components/EventData";
+import eventsData from "../../JSON/events.json"
 import Carousel from "./utils/carousel";
 import PrizesUtil from "./utils/prizes";
 import RulesUtil from "./utils/rules";
 import SubmitUtil from "./utils/submit";
+import "./style.css"
 
-const Events = (name, time, place, href) => {
-    const myEventRef = useRef();
-    const [eventIsVisible, setEventIsVisible] = useState(false);
-    const [showClass, setShowClass] = useState("hide")
-    console.log("eventIsVisible", eventIsVisible)
-    // console.log("showClass", showClass)
+const Events = () => {
 
-    useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                setEventIsVisible(entry.isIntersecting);
-            })
-        })
-        if (myEventRef.current) observer.observe(myEventRef.current)
+    const [show, setShow] = useState(null)
 
-        return () => {
-            if (myEventRef.current) observer.unobserve(myEventRef.current)
-        }
-    }, [myEventRef]);
     return (
         <>
             <section className="main carousel flex items-center justify-center pt-20 ">
                 <Carousel />
             </section>
 
+            <section className="EventsSec flex flex-col pt-20 px-5 text-white">
+                <p className="relative text-2xl">
+                    Events
+                    <span className=" absolute bottom-0 left-0 w-[9%] h-1 bg-[#f00]"></span>
+                </p>
+                <ul>
+                    {
+                        eventsData.map((item) => {
+                            return (
+                                <li style={{ display: `flex` }} className=" event-container-neu flex my-5 rounded-xl bg-[#c90000] h-min">
+                                    <div className="w-3/5 p-3 rounded-l-xl flex flex-col justify-between ">
+                                        <div className="">
+                                            <p className="events-title text-2xl">
+                                                {item.eventName}
+                                            </p>
+                                            <p className="events-title text-xl">
+                                                {item.eventDate}
+                                            </p>
+                                        </div>
+                                        <div className=" my-1 flex items-center justify-between gap-5">
+                                            <button
+                                                className="registerButton py-1 px-2 "
+                                                style={item.eventDate == "Coming Soon" ? { display: "none" } : null} >
+                                                {item.eventDate == "Ongoing" || item.eventDate != "Coming Soon" ? "Register" : null}
+                                            </button>
+
+                                            <button className="registerButton py-1 px-2">
+                                                {item.eventDate != "Ongoing" || item.eventDate == "Coming Soon" ? "Notify me" : null}
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div className=" flex items-center justify-center w-2/5 p-3 rounded-r-xl aspect-square ">
+                                        {/* <span className=" w-full object-cover rounded-xl block aspect-square bg-[#000]"></span> */}
+                                        <img src={item.image} alt="" className=" imgObj w-full h-full object-cover rounded-xl block aspect-square" />
+                                    </div>
+                                </li>
+                            )
+                        })
+                    }
+                </ul>
+
+
+                {/* <button onClick={() => { show == "flex" ? setShow("none") : setShow("flex") }} className="">
+                    {show == "flex" ? `show less ` : "show more"}
+                </button> */}
+            </section>
+
             <section className="others flex flex-col items-center text-white py-[300px] md:py-[300px] ">
                 <RulesUtil />
                 <SubmitUtil />
                 <PrizesUtil />
-
                 {/* {
                     EventData.map((item) => {
                         return (

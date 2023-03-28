@@ -5,6 +5,7 @@ import Home from "./Pages/HomePage";
 import LandingPage from "./Pages/LandingPage";
 import Login from "./Pages/LoginPage";
 import SignupPage from "./Pages/SignupPage";
+import SingularEvent from "./Pages/EventPage/singularEvents";
 function App() {
   return (
     <>
@@ -38,6 +39,12 @@ function App() {
             element={
               <CommonContainer>
                 <Events />
+              </CommonContainer>
+            } />
+          <Route path="/si"
+            element={
+              <CommonContainer>
+                <SingularEvent />
               </CommonContainer>
             } />
 
