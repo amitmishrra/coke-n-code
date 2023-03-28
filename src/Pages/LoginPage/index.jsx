@@ -15,7 +15,7 @@ const Login = () => {
     const [msg, setMsg] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [loggedIn, setloggedIn] = useState(false);
+    const [loggedIn, setLoggedIn] = useState(false);
     const [valid, setvalid] = useState(false);
     const [buttonClicked, setButtonClicked] = useState(false);
     const validate = async () => {
@@ -43,21 +43,21 @@ const Login = () => {
 
                 if (data.msg === "User not found") {
                     setMsg("You are not registered.");
-                    setloggedIn(false)
+                    setLoggedIn(false)
                     setButtonClicked(false);
                     setOpen(true);
                 }
                 if (data.msg === "Logged in successfully") {
                     setMsg("Logged in succesfully.");
-                    setloggedIn(true)
+                    setLoggedIn(true)
                     localStorage.setItem("loggedIn", "true");
                     setTimeout(() => {
-                        window.location.href = "/home";
+                        window.location.href = "/#/home";
                     }, 1000);
                 }
                 if (data.msg === "Incorrect Password") {
                     setMsg("Incorrect Password. Try again.");
-                    setloggedIn(false);
+                    setLoggedIn(false);
                     setButtonClicked(false);
                     setOpen(true);
                 }
