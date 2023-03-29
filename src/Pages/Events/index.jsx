@@ -34,7 +34,7 @@ export default function Events({ name, date, desc, image, googleForm }) {
               <p className="text-xl md:text-2xl">offline</p>
             </div>
             <button className="py-3 mt-5 text-xl font-semibold rounded-xl bg-[#f00] transition hover:bg-[#e40000]">
-              <a href={googleForm} target="_blank" className=' px-[40%]'>
+              <a href={googleForm} target="_blank" className=' md:px-[40%]'>
                 PARTICIPATE
               </a>
             </button>
