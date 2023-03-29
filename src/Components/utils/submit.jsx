@@ -21,7 +21,7 @@ export default function SubmitUtil() {
                                 return (
                                     <li
                                         data-aos="fade-right"
-                                        data-aos-delay={key == 0 ? "100" : `${key + 1 * 100}`}
+                                        data-aos-delay={key == 0 ? "100" : `${(key + 1) * 100}`}
                                         data-aos-duration="500"
                                         data-aos-anchor-placement="center-bottom"
                                         className="">
