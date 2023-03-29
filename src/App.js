@@ -52,6 +52,7 @@ function App() {
                         date={item.eventDate}
                         desc={item.description}
                         image={item.image}
+                        googleForm={item.googleForm}
                       />
                     </CommonContainer>
                   } />
