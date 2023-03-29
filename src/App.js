@@ -1,5 +1,6 @@
 import { Route, Routes, HashRouter, BrowserRouter } from "react-router-dom";
 import CommonContainer from "./CommonContainer";
+import eventLinks from "./JSON/events.json"
 import Events from "./Pages/Events";
 import Home from "./Pages/HomePage";
 import LandingPage from "./Pages/LandingPage";
@@ -33,13 +34,30 @@ function App() {
                 <Home />
               </CommonContainer>
             } />
-          
+
           <Route path="/events"
             element={
               <CommonContainer>
                 <Events />
               </CommonContainer>
             } />
+          {
+            eventLinks.map((item) => {
+              return (
+                <Route path={`/home/${item.eventName}`}
+                  element={
+                    <CommonContainer>
+                      <Events
+                        name={item.eventName}
+                        date={item.eventDate}
+                        desc={item.description}
+                        image={item.image}
+                      />
+                    </CommonContainer>
+                  } />
+              )
+            })
+          }
 
         </Routes>
       </HashRouter>
