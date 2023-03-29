@@ -1,5 +1,6 @@
 import { Route, Routes, HashRouter, BrowserRouter } from "react-router-dom";
 import CommonContainer from "./CommonContainer";
+import Events from "./Pages/Events";
 import Home from "./Pages/HomePage";
 import LandingPage from "./Pages/LandingPage";
 import Login from "./Pages/LoginPage";
@@ -30,6 +31,13 @@ function App() {
             element={
               <CommonContainer>
                 <Home />
+              </CommonContainer>
+            } />
+          
+          <Route path="/events"
+            element={
+              <CommonContainer>
+                <Events />
               </CommonContainer>
             } />
 
