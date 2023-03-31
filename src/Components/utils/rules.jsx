@@ -8,7 +8,7 @@ export default function RulesUtil() {
                 data-aos-delay="100"
                 data-aos-duration="500"
                 data-aos-anchor-placement="center-bottom"
-                className="text-3xl md:text-5xl pb-[8rem]"
+                className="text-3xl md:text-5xl pb-[8rem] gagalin"
             >
                 Rules & Regulations
             </p>
@@ -27,7 +27,10 @@ export default function RulesUtil() {
                                         data-aos-delay={ key==0? "100" : `${(key+1)*100}`}
                                         data-aos-duration="500"
                                         data-aos-anchor-placement="center-bottom"
-                                    ># {rules.rule}
+                                    >{rules.heading} : 
+                                    <span className='text-white '>
+                                    &nbsp; {rules.rule}
+                                    </span>
                                     </li>
                                 )
                             })
