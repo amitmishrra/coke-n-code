@@ -22,10 +22,12 @@ const Footer = () => {
                             </ul>
                         </div>
                         <div className="social-links flex gap-5 py-8">
-                            <a href="#"> <Facebook fontSize='inherit'/> </a>
-                            <a href="#"> <Twitter fontSize='inherit' /> </a>
-                            <a href="#"> <Instagram fontSize='inherit' /> </a>
-                            <a href="#"> <LinkedIn fontSize='inherit' /> </a>
+
+                            <a href="#" target="_blank"> <Facebook fontSize='inherit'/> </a>
+                            <a href="#" target="_blank"> <Twitter fontSize='inherit' /> </a>
+                            <a href="https://www.instagram.com/gigacode17/" target="_blank"> <Instagram fontSize='inherit' /> </a>
+                            <a href="https://www.linkedin.com/company/gigacode/" target="_blank"> <LinkedIn fontSize='inherit' /> </a>
+
                         </div>
                         <div className="footer-col terms-col">
                             <ul className="flex flex-wrap">
