@@ -23,8 +23,8 @@ const Footer = () => {
                         </div>
                         <div className="social-links flex gap-5 py-8">
 
-                            <a href="#" target="_blank"> <Facebook fontSize='inherit'/> </a>
-                            <a href="#" target="_blank"> <Twitter fontSize='inherit' /> </a>
+                            <a href="https://www.facebook.com/profile.php?id=100091230918150" target="_blank"> <Facebook fontSize='inherit'/> </a>
+                            <a href="#" target="_blank">  </a>
                             <a href="https://www.instagram.com/gigacode17/" target="_blank"> <Instagram fontSize='inherit' /> </a>
                             <a href="https://www.linkedin.com/company/gigacode/" target="_blank"> <LinkedIn fontSize='inherit' /> </a>
 
