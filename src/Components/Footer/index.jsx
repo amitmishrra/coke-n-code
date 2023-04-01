@@ -1,4 +1,4 @@
-import { Facebook, FacebookOutlined, Instagram, LinkedIn, Twitter, Gmail} from '@mui/icons-material'
+import { Facebook, FacebookOutlined, Instagram, LinkedIn, Gmail, Mail} from '@mui/icons-material'
 import './style.css'
 
 const Footer = () => {
@@ -24,7 +24,7 @@ const Footer = () => {
                         <div className="social-links flex gap-5 py-8">
 
                             <a href="https://www.facebook.com/profile.php?id=100091230918150" target="_blank"> <Facebook fontSize='inherit'/> </a>
-                            <a href="gigacode17@gmail.com" target="_blank"> <Gmail fontSize='inherit' /> </a>
+                            <a href="mailto:gigacode17@gmail.com" target="_blank"> <Mail fontSize='inherit' /> </a>
                             <a href="https://www.instagram.com/gigacode17/" target="_blank"> <Instagram fontSize='inherit' /> </a>
                             <a href="https://www.linkedin.com/company/gigacode/" target="_blank"> <LinkedIn fontSize='inherit' /> </a>
 

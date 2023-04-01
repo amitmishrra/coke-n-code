@@ -1,6 +1,7 @@
 import { Route, Routes, HashRouter, BrowserRouter } from "react-router-dom";
 import CommonContainer from "./CommonContainer";
 import eventLinks from "./JSON/events.json"
+import Change from "./Pages/settings/change";
 import Events from "./Pages/Events";
 import Home from "./Pages/HomePage";
 import LandingPage from "./Pages/LandingPage";
@@ -26,6 +27,11 @@ function App() {
           <Route path="/signup"
             element={
               <SignupPage />
+            } />
+
+          <Route path="/change-password"
+            element={
+              <Change />
             } />
 
           <Route path="/home"
