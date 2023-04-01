@@ -86,7 +86,7 @@ function Change() {
                     }
                 </div>
                 <div className="flex justify-center items-center w-[100%] text-white mt-[20px]">
-                    <NavLink to="#" className="text-[#ff0000] ml-2"> Forgotten your password?</NavLink>
+                    <NavLink to="/forgot-password" className="text-[#ff0000] ml-2"> Forgotten your password?</NavLink>
                 </div>
             </div>
 
