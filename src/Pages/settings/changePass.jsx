@@ -7,7 +7,7 @@ import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
 
 function Change() {
-
+    const userData = JSON.parse(localStorage.getItem("user"));
     const [oldPassword, setOldPassword] = useState("");
     const [newPassword, setNewPassword] = useState("");
     const [cnfPassword, setCnfPassword] = useState("");
@@ -18,7 +18,6 @@ function Change() {
 
     const handlePassChng = async () => {
         setButtonClicked(true);
-
         if (oldPassword.length < 1) {
             setvalid(false);
             setMsg("Password cannot be empty");
@@ -47,10 +46,41 @@ function Change() {
             setButtonClicked(false);
         }
         else {
+            console.log(oldPassword, newPassword, cnfPassword)
+            handlePassChngApi();
             setvalid(true);
         }
     };
-
+    const handlePassChngApi = async () => {
+        fetch(`https://coke-n-code-backend.vercel.app/changePassword/${userData[0]._id}`, {
+            method: "PUT",
+            crossDomain: true,
+            headers: {
+                "content-Type": "application/json",
+                Accept: "application/json",
+                "Access-Control-Allow-Origin": "*"
+            },
+            body: JSON.stringify({
+                password: oldPassword,
+                newPassword: newPassword,
+            })
+        }).then((res) => res.json())
+            .then((data) => {
+                console.log(data, "registered")
+                if (data.msg === "Password changed successfully") {
+                    setMsg("Password changed successfully");
+                    setvalid(true);
+                    setOpen(true);
+                    setButtonClicked(false);
+                }
+                else {
+                    setMsg("Something went wrong. Please try again later");
+                    setvalid(false);
+                    setOpen(true);
+                    setButtonClicked(false);
+                }
+            });
+    }
     const handleClose = () => {
         setOpen(false);
     };
@@ -79,7 +109,6 @@ function Change() {
                     {
                         buttonClicked ?
                             <CircularProgress sx={{ color: "red", width: "30px", margin: "11.2px" }} /> :
-
                             <div>
                                 <button className='loginButton  shadow-md' onClick={handlePassChng} >Change Password</button>
                             </div>

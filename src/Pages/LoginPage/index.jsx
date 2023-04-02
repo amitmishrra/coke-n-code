@@ -24,6 +24,14 @@ const Login = () => {
     };
 
 
+    const storeData = async () => {
+        fetch(`https://coke-n-code-backend.vercel.app/getUsers/byEmail/${email}`).then((res) => res.json()).then((data) => {
+            localStorage.setItem("user", JSON.stringify(data));
+            console.log(data, "data");
+            console.log(localStorage.getItem("user"), "local");
+        });
+    };
+
     const loginApi = async () => {
         fetch("https://coke-n-code-backend.vercel.app/login-user", {
             method: "POST",
@@ -52,6 +60,7 @@ const Login = () => {
                     setLoggedIn(true)
                     localStorage.setItem("loggedIn", "true");
                     setTimeout(() => {
+                        storeData();
                         window.location.href = "/#/home";
                     }, 1000);
                 }

@@ -2,25 +2,28 @@ import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
 import Button from '@mui/material/Button';
 import React from 'react'
-import { Card } from '@mui/material';
+import emailjs from '@emailjs/browser';
 import { useState } from 'react';
 
-function OtpPopUp() {
+function OtpPopUp(mail) {
 
     const [otp, setOtp] = useState("")
     const [open, setOpen] = useState(true);
-
     const handleClose = () => {
         setOpen(false);
     };
+    
 
     const handleClick = () => {
         if (otp.length < 6) {
+            // handleSubmit()
         }
         else {
             handleClose()
         }
     }
+
+
 
     return (
         <div>
