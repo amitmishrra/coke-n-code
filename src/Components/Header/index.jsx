@@ -36,6 +36,7 @@ export default function Header() {
                         <div className={active} >
                             <ul className='smallText' >
                                 <li onClick={LogOut} >Logout</li>
+                                <li onClick={navToggle}><NavLink to={'/change-password'} >Change-password</NavLink></li>
                             </ul>
                         </div>
 

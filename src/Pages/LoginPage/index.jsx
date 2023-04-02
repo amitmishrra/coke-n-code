@@ -97,7 +97,7 @@ const Login = () => {
         <>
             <div className="login-container max-width h-[70vh] md:h-[80vh] pt-12 flex flex-col justify-around smallText ">
 
-                <div className="w-[300px] m-auto">
+                <div className="w-[270px] md:w-[300px] my-12 md:my-4 m-auto">
                     <img src="assets\logo2.png" className='w-[270px] md:w-[300px] ' alt="" />
                 </div>
 
