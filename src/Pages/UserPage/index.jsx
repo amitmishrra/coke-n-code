@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom';
 
 const UserPage = () => {
 
+    const userData = JSON.parse(localStorage.getItem("user"));
     const LogOut = () => {
         localStorage.setItem("loggedIn", "false");
         setTimeout(() => {
@@ -29,33 +30,24 @@ const UserPage = () => {
 
                 <div className="flex flex-col justify-center items-center w-[100%]">
                     <ul className=' text-xl '>
-                        <li>
-                            Name
+                        <li className=' capitalize'>
+                            {userData[0].fullName}
                         </li>
                         <li className='text-lg text-[#cecece]'>
-                            Username
+                            {userData[0].username}
                         </li>
                         <li className='text-lg text-[#cecece]'>
-                            Email
+                            {userData[0].email}
                         </li>
                         {/* <li>change password</li> */}
                     </ul>
-                    
+
                     <div className='flex flex-col items-center mt-8 gap-1'>
                         <p className='text-sm text-[#f00]'> <NavLink to={"/change-password"} >change password</NavLink></p>
                         <button className='loginButton bg-black' onClick={LogOut} >logout</button>
                     </div>
                 </div>
-                {/* <div className="flex justify-center items-center w-[100%] text-white mt-[20px]">
-                    <NavLink to="#" className="text-[#ff0000] ml-2"> can't reset your password?</NavLink>
-                </div> */}
             </div>
-
-            {/* <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-        <Alert onClose={handleClose} severity={"error"} sx={{ width: '100%' }}>
-            {msg}
-        </Alert>
-    </Snackbar> */}
         </div>
     )
 }
