@@ -1,16 +1,12 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import "./style.css"
 
 export default function Header() {
     const [active, setActive] = useState("menu");
     const [togglerIcon, setIcon] = useState("navToggler");
-    const LogOut = () => {
-        localStorage.setItem("loggedIn", "false");
-        setTimeout(() => {
-            window.location.href = "/";
-        }, 1000);
-    }
+    
     const navToggle = () => {
         active === 'menu' ?
             setActive('menuActive menu') :
@@ -35,8 +31,9 @@ export default function Header() {
 
                         <div className={active} >
                             <ul className='smallText' >
-                                <li onClick={LogOut} >Logout</li>
-                                <li onClick={navToggle}><NavLink to={'/change-password'} >Change-password</NavLink></li>
+                                {/* <li onClick={LogOut} >Logout</li>
+                                <li onClick={navToggle}><NavLink to={'/change-password'} >Change-password</NavLink></li> */}
+                                <li><NavLink to={"/user"} ><AccountCircleIcon sx={{ fontSize : "2rem"}} /></NavLink>  </li>
                             </ul>
                         </div>
 

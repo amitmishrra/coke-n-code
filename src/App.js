@@ -8,6 +8,8 @@ import LandingPage from "./Pages/LandingPage";
 import Login from "./Pages/LoginPage";
 import SignupPage from "./Pages/SignupPage";
 import Forgot from "./Pages/settings/forgotPass";
+import UserPage from "./Pages/UserPage";
+import About from "./Pages/AboutPage";
 function App() {
   return (
     <>
@@ -34,16 +36,28 @@ function App() {
             element={
               <Change />
             } />
-          
+
           <Route path="/forgot-password"
             element={
               <Forgot />
+            } />
+
+          <Route path="/user"
+            element={
+              <UserPage />
             } />
 
           <Route path="/home"
             element={
               <CommonContainer>
                 <Home />
+              </CommonContainer>
+            } />
+          
+          <Route path="/about"
+            element={
+              <CommonContainer>
+                <About />
               </CommonContainer>
             } />
 
