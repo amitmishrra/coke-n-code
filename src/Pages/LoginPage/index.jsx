@@ -64,7 +64,7 @@ const Login = () => {
                         window.location.href = "/#/home";
                     }, 1000);
                 }
-                if (data.msg === "Incorrect Password") {
+                if (data.msg === "Incorrect password. Please try again") {
                     setMsg("Incorrect Password. Try again.");
                     setLoggedIn(false);
                     setButtonClicked(false);
