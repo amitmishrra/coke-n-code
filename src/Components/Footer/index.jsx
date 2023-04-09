@@ -1,4 +1,5 @@
 import { Facebook, FacebookOutlined, Instagram, LinkedIn, Gmail, Mail} from '@mui/icons-material'
+import { NavLink } from 'react-router-dom'
 import './style.css'
 
 const Footer = () => {
@@ -33,7 +34,7 @@ const Footer = () => {
                             <ul className="flex flex-wrap">
                                 <li>@ skillance corp.</li>
                                 <li><a href="#">Terms & conditions</a></li>
-                                <li><a href="#">About us</a></li>
+                                <li><a> <NavLink to={"/about"} >About us</NavLink></a></li>
                                 <li><a href="#">Privacy Policy</a></li>
                                 <li><a href="#">Services</a></li>
                             </ul>
