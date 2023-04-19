@@ -17,6 +17,7 @@ const Login = () => {
     const [password, setPassword] = useState("");
     const [loggedIn, setLoggedIn] = useState(false);
     const [valid, setvalid] = useState(false);
+    const [showpwd, setShowpwd] = useState(false);
     const [buttonClicked, setButtonClicked] = useState(false);
     const validate = async () => {
         console.log(email, password);
@@ -113,9 +114,14 @@ const Login = () => {
                 <div className="ctr w-[90%] md:w-[45%] m-auto bg-[#151515]  box-border rounded-lg text-[15px] mt-12 py-4">
                     <div className='text-white text-[23px] text-center smallText'>Welcome back <span className="coke">Geek </span>!</div>
 
-                    <div className="flex flex-col justify-center items-center w-[100%]">
+                    <div className="flex relative flex-col justify-center items-center w-[100%]">
                         <input className='inputs w-[75%] md:w-[65%] shadow-md' required placeholder='Email' type="mail" onChange={e => (setEmail(e.target.value))} />
-                        <input className='inputs w-[75%] md:w-[65%] shadow-md' required placeholder='Password' type="password" onChange={e => (setPassword(e.target.value))} />
+                        <input className='inputs w-[75%] md:w-[65%] shadow-md' required placeholder='Password' type={showpwd? "text" : "password"} onChange={e => (setPassword(e.target.value))} />
+                        <button onClick={()=>{setShowpwd(!showpwd)}} className="absolute text-white bottom-5 md:right-28 right-12">
+                            {
+                                showpwd? <VisibilityOff /> : <Visibility />
+                            }
+                        </button>
                     </div>
 
                     <div className="flex flex-col justify-center items-center w-[100%]">

@@ -11,6 +11,7 @@ import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
 
 export default function SignupPage() {
+    const [showpwd, setShowpwd] = useState(false);
     const [open, setOpen] = useState(false);
     const [msg, setMsg] = useState("");
     const [username, setUsername] = useState("");
@@ -134,12 +135,17 @@ export default function SignupPage() {
                 <div className="ctr w-[90%] md:w-[45%] m-auto bg-[#151515]  box-border rounded-lg text-[15px] mt-12 py-4">
                     <div className='text-white text-[23px] text-center smallText'>Welcome <span className="coke">Geek </span>!</div>
 
-                    <div className="flex flex-col justify-center items-center w-[100%]">
+                    <div className="flex relative flex-col justify-center items-center w-[100%]">
                         <input className='inputs w-[75%] md:w-[65%] shadow-md' required placeholder='Full Name' type="text" onChange={e => (setFullName(e.target.value))} />
                         <input className='inputs w-[75%] md:w-[65%] shadow-md' required placeholder='Username' type="text" onChange={e => (setUsername(e.target.value))} />
                         <input className='inputs w-[75%] md:w-[65%] shadow-md' required placeholder='Email' type="mail" onChange={e => (setEmail(e.target.value))} />
-                        <input className='inputs w-[75%] md:w-[65%] shadow-md' required placeholder='Password' type="password" onChange={e => (setPassword(e.target.value))} />
-                        <input className='inputs w-[75%] md:w-[65%] shadow-md' required placeholder='Confirm Password' type="password" onChange={e => (setCnfPassword(e.target.value))} />
+                        <input className='inputs w-[75%] md:w-[65%] shadow-md' required placeholder='Password' type={showpwd? "text" : "password"} onChange={e => (setPassword(e.target.value))} />
+                        <input className='inputs w-[75%] md:w-[65%] shadow-md' required placeholder='Confirm Password' type={showpwd? "text" : "password"} onChange={e => (setCnfPassword(e.target.value))} />
+                        <button onClick={()=>{setShowpwd(!showpwd)}} className="absolute text-white bottom-5 md:right-28 right-12">
+                            {
+                                showpwd? <VisibilityOff /> : <Visibility />
+                            }
+                        </button>
                     </div>
 
                     <div className="flex flex-col justify-center items-center w-[100%]">

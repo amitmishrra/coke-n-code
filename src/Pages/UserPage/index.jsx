@@ -1,6 +1,7 @@
 import React from 'react'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ModeEditIcon from '@mui/icons-material/ModeEdit';
+import WestIcon from '@mui/icons-material/West';
 import { NavLink } from 'react-router-dom';
 
 const UserPage = () => {
@@ -20,8 +21,12 @@ const UserPage = () => {
                 <img src="assets\logo2.png" className='w-[270px] md:w-[300px] ' alt="" />
             </div>
 
-            <div className="ctr flex flex-col gap-8 w-[90%] md:max-w-[35%] m-auto bg-[#151515] text-white box-border rounded-lg text-[15px] mt-12 py-8">
-                {/* <div className='text-white text-[23px] text-center smallText'>Welcome back <span className="coke">Geek </span>!</div> */}
+            <div className="ctr relative flex flex-col gap-8 w-[90%] md:max-w-[35%] m-auto bg-[#151515] text-white box-border rounded-lg text-[15px] mt-12 py-8">
+                <NavLink to={"/home"}>
+                    <button className="absolute top-2 left-2">
+                        <WestIcon />
+                    </button>
+                </NavLink>
                 <div className='flex flex-col items-center gap-4 smallText '>
                     <AccountCircleIcon sx={{ fontSize: "10rem" }} />
                     {/* <img src="" className="block h-[8rem] aspect-square object-cover rounded-[50%] " alt="" /> */}
