@@ -14,8 +14,8 @@ const Footer = () => {
                         <div className="footer-col">
                             <ul className='flex flex-col md:flex-row md:gap-5 '>
                                 <li><a href="#">Contests</a></li>
-                                <li><a href="#">Performances</a></li>
-                                <li><a href="#">Tasks</a></li>
+                                {/* <li><a href="#">Performances</a></li>
+                                <li><a href="#">Tasks</a></li> */}
                                 <li><a href="#">Program</a></li>
                                 <li><a href="#">Upcoming Contests</a></li>
                                 <li><a href="#">Participation </a></li>
