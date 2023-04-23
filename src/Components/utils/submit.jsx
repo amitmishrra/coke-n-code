@@ -12,7 +12,7 @@ export default function SubmitUtil() {
             <div className=" w-full flex items-center justify-center">
                 <span
                     data-aos="fade-down"
-                    data-aos-anchor-placement="center-bottom"
+                    data-aos-anchor-placement="top-bottom"
                     className="block border-l-2 py-20 border-[#ff0000]">
                     <ul className="flex flex-col gap-[6rem] -ml-5 ">
 
@@ -23,7 +23,7 @@ export default function SubmitUtil() {
                                         data-aos="fade-right"
                                         data-aos-delay={key == 0 ? "100" : `${(key + 1) * 100}`}
                                         data-aos-duration="500"
-                                        data-aos-anchor-placement="center-bottom"
+                                        data-aos-anchor-placement="top-bottom"
                                         className="">
                                         <div className="ml-5 text-xl p-2 w-[70vw] md:w-[600px]">
                                             {item.text}
