@@ -21,7 +21,7 @@ export default function Events({ name, date, desc, image, googleForm }) {
           <div className="description-wrapper text-white text-xl md:py-16">
             {desc}
           </div>
-          <div className="details-wrapper flex flex-col w-[60%] p-5 mt-2 md:p-8 rounded-xl text-white bg-[#333]">
+          <div className="details-wrapper flex flex-col  w-[95%] md:w-[60%] p-5 mt-2 md:p-8 rounded-xl text-white bg-[#333]">
             <p className=" text-xl md:text-2xl gagalin">
               {name}
             </p>

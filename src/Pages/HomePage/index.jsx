@@ -31,7 +31,7 @@ export default function Home() {
         <div className="events flex justify-between items-center w-[90%]">
           {eventsData.map((event) => {
             return (
-              <NavLink to ={event.eventName}>
+              <NavLink to ={`/${event.eventName}`}>
                 <div className="nextbox flex flex-col justify-start">
                   <div className="name gagalin md:text-[30px] text-[23px] coke">
                     {event.eventName}

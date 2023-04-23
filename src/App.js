@@ -70,7 +70,7 @@ function App() {
           {
             eventLinks.map((item) => {
               return (
-                <Route path={`/home/${item.eventName}`}
+                <Route path={`/${item.eventName}`}
                   element={
                     <CommonContainer>
                       <Events
