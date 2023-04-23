@@ -33,10 +33,10 @@ const Footer = () => {
                         <div className="footer-col terms-col">
                             <ul className="flex flex-wrap">
                                 <li>@ skillance corp.</li>
-                                <li><a href="#">Terms & conditions</a></li>
+                                <li><a href="/assets/docs/Terms_of_Services.pdf" target="_blank">Terms & conditions</a></li>
                                 <li><a> <NavLink to={"/about"} >About us</NavLink></a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Services</a></li>
+                                <li><a href="/assets/docs/Privacy_Policy.pdf" target="_blank">Privacy Policy</a></li>
+                                <li><a href="/assets/docs/Code_of_Conduct.pdf" target="_blank">Code of Conduct</a></li>
                             </ul>
                         </div>
                     </div>
