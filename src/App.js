@@ -1,13 +1,13 @@
 import { Route, Routes, HashRouter, BrowserRouter } from "react-router-dom";
 import CommonContainer from "./CommonContainer";
 import eventLinks from "./JSON/events.json"
-import Change from "./Pages/settings/changePass";
+import Change from "./Components/settings/changePass";
 import Events from "./Pages/Events";
 import Home from "./Pages/HomePage";
 import LandingPage from "./Pages/LandingPage";
 import Login from "./Pages/LoginPage";
 import SignupPage from "./Pages/SignupPage";
-import Forgot from "./Pages/settings/forgotPass";
+import Forgot from "./Components/settings/forgotPass";
 import UserPage from "./Pages/UserPage";
 import About from "./Pages/AboutPage";
 function App() {
@@ -70,7 +70,7 @@ function App() {
           {
             eventLinks.map((item) => {
               return (
-                <Route path={`/home/${item.eventName}`}
+                <Route path={`/${item.eventName}`}
                   element={
                     <CommonContainer>
                       <Events
