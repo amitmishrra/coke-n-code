@@ -4,6 +4,8 @@ import ModeEditIcon from '@mui/icons-material/ModeEdit';
 import WestIcon from '@mui/icons-material/West';
 import { NavLink } from 'react-router-dom';
 
+// login-container max-width smallText
+
 const UserPage = () => {
 
     const userData = JSON.parse(localStorage.getItem("user"));
@@ -15,22 +17,13 @@ const UserPage = () => {
     }
 
     return (
-        <div className="login-container max-width pt-12 flex flex-col justify-around smallText ">
+        <section className="max-width smallText py-12 w-full flex flex-col md:flex-row items-center md:items-start gap-8 ">
+            <div className="md:sticky md:top-24 left-0 flex flex-col justify-around gap-10 max-w-min md:h-[80vh] w-[85vw] min-w-[85vw] md:min-w-0 bg-[#151515] text-white box-border rounded-lg text-[15px] mt-12 py-10 md:px-5 px-3">
 
-            <div className="w-[270px] md:w-[300px] my-12 md:my-4 m-auto">
-                <img src="assets\logo2.png" className='w-[270px] md:w-[300px] ' alt="" />
-            </div>
-
-            <div className="ctr relative flex flex-col gap-8 w-[90%] md:max-w-[35%] m-auto bg-[#151515] text-white box-border rounded-lg text-[15px] mt-12 py-8">
-                <NavLink to={"/home"}>
-                    <button className="absolute top-2 left-2">
-                        <WestIcon />
-                    </button>
-                </NavLink>
                 <div className='flex flex-col items-center gap-4 smallText '>
                     <AccountCircleIcon sx={{ fontSize: "10rem" }} />
                     {/* <img src="" className="block h-[8rem] aspect-square object-cover rounded-[50%] " alt="" /> */}
-                    <p className='text-sm text-[#f00]'> <NavLink to={"/#"} >edit profile</NavLink></p>
+                    {/* <p className='text-sm text-[#f00]'> <NavLink to={"/#"} >edit profile</NavLink></p> */}
                 </div>
 
                 <div className="flex flex-col justify-center items-center w-[100%]">
@@ -48,12 +41,47 @@ const UserPage = () => {
                     </ul>
 
                     <div className='flex flex-col items-center mt-8 gap-1'>
-                        <p className='text-sm text-[#f00]'> <NavLink to={"/change-password"} >change password</NavLink></p>
+                        <p className='text-sm text-[#f00]'> <NavLink to={"/change-password"} >settings</NavLink></p>
                         <button className='loginButton bg-black' onClick={LogOut} >logout</button>
                     </div>
                 </div>
             </div>
-        </div>
+            <div className=" md:mt-12 flex flex-col min-w-[66%]  text-white box-border md:px-0 px-3 overflow-x-scroll">
+                <div className="">
+                    <p className="text-xl  text-white">Active Hackthons</p>
+                    <div className="flex flex-col items-center justify-center w-full py-4">
+                        <div className="flex items-center gap-5 overflow-x-scroll w-[85vw] md:w-full md:min-w-0 min-w-[85vw] ">
+                            <span className="h-[180px] w-min aspect-video bg-blue-500"></span>
+                            <span className="h-[180px] w-min aspect-video bg-blue-500"></span>
+                            <span className="h-[180px] w-min aspect-video bg-blue-500"></span>
+                            <span className="h-[180px] w-min aspect-video bg-blue-500"></span>
+                        </div>
+                    </div>
+                </div>
+                <div className="">
+                    <p className="text-xl ">Past Hackthons</p>
+                    <div className="flex flex-col items-center justify-center w-full py-4">
+                        <div className="flex items-center gap-5 overflow-x-scroll w-[85vw] md:w-full md:min-w-0 min-w-[85vw] ">
+                            <span className="h-[180px] w-min aspect-video bg-blue-500"></span>
+                            <span className="h-[180px] w-min aspect-video bg-blue-500"></span>
+                            <span className="h-[180px] w-min aspect-video bg-blue-500"></span>
+                            <span className="h-[180px] w-min aspect-video bg-blue-500"></span>
+                        </div>
+                    </div>
+                </div>
+                <div className="">
+                    <p className="text-xl ">Notifications</p>
+                    <div className="flex flex-col items-center justify-center w-full py-4">
+                        <div className="flex items-center gap-5 overflow-x-scroll w-[85vw] md:w-full md:min-w-0 min-w-[85vw] ">
+                            <span className="h-[180px] w-min aspect-video bg-blue-500"></span>
+                            <span className="h-[180px] w-min aspect-video bg-blue-500"></span>
+                            <span className="h-[180px] w-min aspect-video bg-blue-500"></span>
+                            <span className="h-[180px] w-min aspect-video bg-blue-500"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     )
 }
 

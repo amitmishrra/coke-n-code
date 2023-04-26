@@ -44,7 +44,9 @@ function App() {
 
           <Route path="/user"
             element={
-              <UserPage />
+              <CommonContainer>
+                <UserPage />
+              </CommonContainer>
             } />
 
           <Route path="/home"
