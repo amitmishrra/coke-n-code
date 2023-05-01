@@ -51,21 +51,10 @@ const UserPage = () => {
                     <p className="text-xl  text-white">Active Hackthons</p>
                     <div className="flex flex-col items-center justify-center w-full py-4">
                         <div className="flex items-center gap-5 overflow-x-scroll w-[85vw] md:w-full md:min-w-0 min-w-[85vw] ">
-                            <span className="h-[180px] w-min aspect-video bg-blue-500"></span>
-                            <span className="h-[180px] w-min aspect-video bg-blue-500"></span>
-                            <span className="h-[180px] w-min aspect-video bg-blue-500"></span>
-                            <span className="h-[180px] w-min aspect-video bg-blue-500"></span>
-                        </div>
-                    </div>
-                </div>
-                <div className="">
-                    <p className="text-xl ">Past Hackthons</p>
-                    <div className="flex flex-col items-center justify-center w-full py-4">
-                        <div className="flex items-center gap-5 overflow-x-scroll w-[85vw] md:w-full md:min-w-0 min-w-[85vw] ">
-                            <span className="h-[180px] w-min aspect-video bg-blue-500"></span>
-                            <span className="h-[180px] w-min aspect-video bg-blue-500"></span>
-                            <span className="h-[180px] w-min aspect-video bg-blue-500"></span>
-                            <span className="h-[180px] w-min aspect-video bg-blue-500"></span>
+                            <span className=" h-[20vh] md:h-[180px] w-min aspect-video bg-blue-500"></span>
+                            <span className=" h-[20vh] md:h-[180px] w-min aspect-video bg-blue-500"></span>
+                            <span className=" h-[20vh] md:h-[180px] w-min aspect-video bg-blue-500"></span>
+                            <span className=" h-[20vh] md:h-[180px] w-min aspect-video bg-blue-500"></span>
                         </div>
                     </div>
                 </div>
@@ -73,10 +62,21 @@ const UserPage = () => {
                     <p className="text-xl ">Notifications</p>
                     <div className="flex flex-col items-center justify-center w-full py-4">
                         <div className="flex items-center gap-5 overflow-x-scroll w-[85vw] md:w-full md:min-w-0 min-w-[85vw] ">
-                            <span className="h-[180px] w-min aspect-video bg-blue-500"></span>
-                            <span className="h-[180px] w-min aspect-video bg-blue-500"></span>
-                            <span className="h-[180px] w-min aspect-video bg-blue-500"></span>
-                            <span className="h-[180px] w-min aspect-video bg-blue-500"></span>
+                            <span className=" h-[12vh] md:h-[130px] w-min aspect-[4/3] bg-blue-500"></span>
+                            <span className=" h-[12vh] md:h-[130px] w-min aspect-[4/3] bg-blue-500"></span>
+                            <span className=" h-[12vh] md:h-[130px] w-min aspect-[4/3] bg-blue-500"></span>
+                            <span className=" h-[12vh] md:h-[130px] w-min aspect-[4/3] bg-blue-500"></span>
+                        </div>
+                    </div>
+                </div>
+                <div className="">
+                    <p className="text-xl ">Past Hackthons</p>
+                    <div className="flex flex-col items-center justify-center w-full py-4">
+                        <div className="flex items-center gap-5 overflow-x-auto w-[85vw] md:w-full md:min-w-0 min-w-[85vw] ">
+                            <span className=" h-[18vh] md:h-[150px] w-min aspect-video bg-blue-500"></span>
+                            <span className=" h-[18vh] md:h-[150px] w-min aspect-video bg-blue-500"></span>
+                            <span className=" h-[18vh] md:h-[150px] w-min aspect-video bg-blue-500"></span>
+                            <span className=" h-[18vh] md:h-[150px] w-min aspect-video bg-blue-500"></span>
                         </div>
                     </div>
                 </div>
